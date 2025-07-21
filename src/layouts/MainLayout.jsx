@@ -19,7 +19,7 @@ import { getMeInformation } from "../request";
 import { toast } from "sonner";
 
 export default function MainLayout() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const { user } = useSelector((state) => state.auth);
   const [showIcons, setShowIcons] = useState(false);
   const navigate = useNavigate();
