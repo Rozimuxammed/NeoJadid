@@ -26,6 +26,10 @@ export default function App() {
           index: true,
           element: <Home />,
         },
+        {
+          path: "/profile",
+          element: <Profile />,
+        },
       ],
     },
     {
@@ -35,10 +39,6 @@ export default function App() {
     {
       path: "/register",
       element: user ? <Navigate to={"/"} /> : <Register />,
-    },
-    {
-      path: "/profile",
-      element: <Profile />,
     },
   ]);
   return <RouterProvider router={routes} />;
