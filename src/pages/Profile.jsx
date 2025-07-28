@@ -3,12 +3,13 @@ import { getMeInformation, upDate, updateImage } from "../request";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../lib/redux/slices/auth-slice";
 import { useEffect, useRef, useState } from "react";
-import { ImageDown, Pencil } from "lucide-react";
+import { ImageDown, Pencil, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { NavLink } from "react-router-dom";
 export default function Profile() {
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
@@ -110,6 +111,15 @@ export default function Profile() {
   };
   return (
     <div className="flex flex-col items-center justify-start px-4 md:px-10 py-10">
+      <Button
+        variant={"outline"}
+        size={"icon"}
+        className="absolute top-5 right-5 cursor-pointer"
+      >
+        <NavLink to={"/"}>
+          <X />
+        </NavLink>
+      </Button>
       <div className="flex flex-col items-start gap-4 w-full max-w-3xl">
         {/* Avatar */}
         <label className="relative cursor-pointer">

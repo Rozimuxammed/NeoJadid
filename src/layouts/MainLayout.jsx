@@ -21,7 +21,6 @@ export default function MainLayout() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const { user } = useSelector((state) => state.auth);
   const [showIcons, setShowIcons] = useState(false);
-  // const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const logout = () => {

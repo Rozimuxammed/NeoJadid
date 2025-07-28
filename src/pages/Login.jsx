@@ -106,7 +106,7 @@ export default function Login() {
                   type="button"
                   className="cursor-pointer"
                 >
-                  <AiOutlineGoogle size={20} />
+                  <AiOutlineGoogle size={20} /> Google
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -134,7 +134,7 @@ export default function Login() {
                   type="button"
                   className="cursor-pointer"
                 >
-                  <AiOutlineGithub size={20} />
+                  <AiOutlineGithub size={20} /> Github
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
