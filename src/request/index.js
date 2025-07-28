@@ -127,13 +127,12 @@ export const updateImage = async (img) => {
   }
 };
 
-export const withGoogle = async () => {
+export const withGoogle = () => {
   try {
     localStorage.setItem("redirect_after_login", window.location.href);
-
     window.location.href = `${BASE_URL}/auth/google`;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
