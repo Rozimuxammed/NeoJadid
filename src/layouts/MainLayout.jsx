@@ -27,7 +27,6 @@ export default function MainLayout() {
     localStorage.clear();
     dispatch(logoutUser());
     toast.success("Successfully logged out.");
-    navigate("/login");
     logOut(user);
   };
 

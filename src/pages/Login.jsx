@@ -14,7 +14,7 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/tooltip";
-import { login } from "../request";
+import { login, withGithub, withGoogle } from "../request";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setUser } from "../lib/redux/slices/auth-slice";
 
@@ -52,6 +52,14 @@ export default function Login() {
           dispatch(setLoading(false));
         });
     }
+  };
+
+  const loginWithGoogle = async () => {
+    await withGoogle();
+  };
+
+  const loginWithGithub = async () => {
+    await withGithub();
   };
 
   return (
@@ -102,6 +110,7 @@ export default function Login() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
+                  onClick={loginWithGoogle}
                   variant="outline"
                   type="button"
                   className="cursor-pointer"
@@ -130,6 +139,7 @@ export default function Login() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
+                  onClick={loginWithGithub}
                   variant="outline"
                   type="button"
                   className="cursor-pointer"

@@ -126,3 +126,23 @@ export const updateImage = async (img) => {
     toast.error(message);
   }
 };
+
+export const withGoogle = async () => {
+  try {
+    localStorage.setItem("redirect_after_login", window.location.href);
+
+    window.location.href = `${BASE_URL}/auth/google`;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const withGithub = async () => {
+  try {
+    localStorage.setItem("redirect_after_login", window.location.href);
+
+    window.location.href = `${BASE_URL}/auth/github`;
+  } catch (error) {
+    console.log(error);
+  }
+};
